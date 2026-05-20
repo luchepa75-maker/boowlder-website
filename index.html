@@ -18,6 +18,29 @@
       min-height: 100vh;
       background: #F2EDE6;
       position: relative;
+      overflow: hidden;
+    }
+
+    .hero-deco {
+      position: absolute;
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 1;
+    }
+
+    .carousel,
+    .carousel-slide,
+    .carousel-progress {
+      position: relative;
+      z-index: 1;
+    }
+
+    .carousel {
+      position: relative;
+      z-index: 1;
     }
 
     .carousel {
@@ -313,7 +336,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/images/logo-boowlder.png" alt="Boowlder logo">
+        <svg width="32" height="28" viewBox="0 0 36 28" fill="none" aria-hidden="true"><ellipse cx="18" cy="22" rx="15" ry="5" fill="#1e3a5f"/><ellipse cx="18" cy="14.5" rx="12" ry="4.5" fill="#0F6E56"/><ellipse cx="18" cy="7" rx="9.5" ry="4" fill="#1D9E75"/></svg>
         <div class="nav-brand">
           <span class="nav-brand-name">Boowlder</span>
         </div>
@@ -344,6 +367,20 @@
 
 <!-- ── Hero Carousel ───────────────────────────────────────────────── -->
 <section class="hero">
+
+  <!-- Decorative background SVG -->
+  <div class="hero-deco" aria-hidden="true">
+    <svg width="640" height="640" viewBox="0 0 640 640" fill="none">
+      <circle cx="320" cy="320" r="300" stroke="#1D9E75" stroke-width="1" opacity="0.06"/>
+      <circle cx="320" cy="320" r="250" stroke="#1D9E75" stroke-width="1" opacity="0.055"/>
+      <circle cx="320" cy="320" r="200" stroke="#1D9E75" stroke-width="1" opacity="0.05"/>
+      <circle cx="320" cy="320" r="150" stroke="#1D9E75" stroke-width="1" opacity="0.045"/>
+      <circle cx="320" cy="320" r="100" stroke="#1D9E75" stroke-width="1.5" opacity="0.04"/>
+      <circle cx="320" cy="320" r="52" stroke="#1D9E75" stroke-width="2" opacity="0.035"/>
+      <circle cx="320" cy="320" r="16" fill="#1D9E75" opacity="0.04"/>
+    </svg>
+  </div>
+
   <div class="container">
     <div class="carousel" id="hero-carousel">
 
@@ -528,7 +565,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <img src="assets/images/logo-boowlder.png" alt="Boowlder">
+          <svg width="28" height="24" viewBox="0 0 36 28" fill="none" aria-hidden="true"><ellipse cx="18" cy="22" rx="15" ry="5" fill="rgba(255,255,255,.28)"/><ellipse cx="18" cy="14.5" rx="12" ry="4.5" fill="rgba(255,255,255,.55)"/><ellipse cx="18" cy="7" rx="9.5" ry="4" fill="rgba(255,255,255,.88)"/></svg>
           <span class="footer-logo-name">Boowlder</span>
         </div>
         <p class="footer-tagline" data-en="Premium tools for developers and solo founders. Buy once, own it forever." data-fr="Outils premium pour développeurs et fondateurs solo. Achetez une fois, gardez pour toujours.">Premium tools for developers and solo founders. Buy once, own it forever.</p>

@@ -22,12 +22,16 @@
   --transition: 0.25s cubic-bezier(.4,0,.2,1);
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  background: #F2EDE6;
+}
 
 body {
   font-family: var(--font-sans);
-  background: var(--bg);
-  color: var(--ink);
+  background: #F2EDE6;
+  color: #1a1a1a;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -111,14 +115,17 @@ p { color: var(--ink-60); }
   top: 0; left: 0; right: 0;
   z-index: 100;
   height: 68px;
-  transition: background var(--transition), backdrop-filter var(--transition), box-shadow var(--transition);
+  background: #F2EDE6;
+  border-bottom: 1px solid transparent;
+  transition: background var(--transition), backdrop-filter var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .nav.scrolled {
-  background: rgba(242,237,230,.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 var(--border);
+  background: rgba(242,237,230,.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: #ddd5c8;
+  box-shadow: 0 1px 12px rgba(26,26,26,.06);
 }
 
 .nav-inner {
@@ -320,10 +327,11 @@ section { padding: 96px 0; }
   gap: 10px;
 }
 
-.footer-logo img {
+.footer-logo img,
+.footer-logo svg {
   height: 28px;
   width: auto;
-  filter: brightness(0) invert(1) opacity(.9);
+  flex-shrink: 0;
 }
 
 .footer-logo-name {

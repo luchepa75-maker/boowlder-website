@@ -11,39 +11,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <style>
-    .page-hero { padding: 128px 0 64px; }
+    .page-hero { padding: 128px 0 64px; background: #F2EDE6; }
 
     .changelog-timeline {
       position: relative;
-      padding-left: 28px;
+      padding-left: 48px;
     }
 
     .changelog-timeline::before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 8px;
+      left: 8px;
+      top: 20px;
       bottom: 0;
       width: 2px;
-      background: var(--border);
+      background: linear-gradient(to bottom, #1D9E75, rgba(29,158,117,.15));
     }
 
     .changelog-entry {
       position: relative;
-      margin-bottom: 60px;
+      margin-bottom: 20px;
+      background: #ffffff;
+      border: 1px solid #e8e0d8;
+      border-radius: 10px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 2px 8px rgba(26,26,26,.04);
+      transition: box-shadow .2s ease;
+    }
+
+    .changelog-entry:hover {
+      box-shadow: 0 6px 20px rgba(26,26,26,.08);
     }
 
     .changelog-entry::before {
       content: '';
       position: absolute;
-      left: -34px;
-      top: 10px;
+      left: -44px;
+      top: 20px;
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: var(--green);
-      border: 2px solid var(--bg);
-      box-shadow: 0 0 0 2px var(--green);
+      background: #1D9E75;
+      border: 2px solid #F2EDE6;
+      box-shadow: 0 0 0 2px #1D9E75;
     }
   </style>
 </head>
@@ -53,7 +63,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/images/logo-boowlder.png" alt="Boowlder logo">
+        <svg width="32" height="28" viewBox="0 0 36 28" fill="none" aria-hidden="true"><ellipse cx="18" cy="22" rx="15" ry="5" fill="#1e3a5f"/><ellipse cx="18" cy="14.5" rx="12" ry="4.5" fill="#0F6E56"/><ellipse cx="18" cy="7" rx="9.5" ry="4" fill="#1D9E75"/></svg>
         <div class="nav-brand">
           <span class="nav-brand-name">Boowlder</span>
         </div>
@@ -181,7 +191,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <img src="assets/images/logo-boowlder.png" alt="Boowlder">
+          <svg width="28" height="24" viewBox="0 0 36 28" fill="none" aria-hidden="true"><ellipse cx="18" cy="22" rx="15" ry="5" fill="rgba(255,255,255,.28)"/><ellipse cx="18" cy="14.5" rx="12" ry="4.5" fill="rgba(255,255,255,.55)"/><ellipse cx="18" cy="7" rx="9.5" ry="4" fill="rgba(255,255,255,.88)"/></svg>
           <span class="footer-logo-name">Boowlder</span>
         </div>
         <p class="footer-tagline" data-en="Premium tools for developers and solo founders." data-fr="Outils premium pour développeurs et fondateurs solo.">Premium tools for developers and solo founders.</p>
