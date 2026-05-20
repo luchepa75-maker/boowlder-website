@@ -14,10 +14,10 @@
     /* ── Hero ───────────────────────────────────────────────────────── */
     .hero {
       padding-top: 68px;
+      padding-bottom: 0;
       min-height: 100vh;
-      background: var(--bg);
+      background: #F2EDE6;
       position: relative;
-      overflow: hidden;
     }
 
     .carousel {
@@ -104,98 +104,112 @@
       justify-content: center;
     }
 
-    .carousel-mockup {
+    .hero-visual-card {
       width: 100%;
-      max-width: 520px;
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, #e8e2d8 0%, #d4cfc6 100%);
-      border-radius: 16px;
-      box-shadow: var(--shadow-lg);
+      max-width: 420px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 24px 64px rgba(26,26,26,.11), 0 4px 16px rgba(26,26,26,.06);
+      border: 1px solid rgba(26,26,26,.06);
+    }
+
+    .hero-visual-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(26,26,26,.07);
+    }
+
+    .hero-visual-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #1D9E75, #0F6E56);
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .carousel-mockup-inner {
-      width: 88%;
-      height: 82%;
-      background: var(--white);
-      border-radius: 10px;
-      box-shadow: 0 4px 24px rgba(0,0,0,.08);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .mockup-bar {
-      height: 32px;
-      background: #f0ece5;
-      border-bottom: 1px solid rgba(0,0,0,.06);
-      display: flex;
-      align-items: center;
-      padding: 0 12px;
-      gap: 6px;
+      font-size: 1.7rem;
       flex-shrink: 0;
     }
 
-    .mockup-dot {
-      width: 9px; height: 9px;
+    .hero-visual-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .hero-visual-sub {
+      font-size: .8rem;
+      color: rgba(26,26,26,.5);
+    }
+
+    .hero-visual-engines {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .hero-engine-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: #F2EDE6;
+      border-radius: 9px;
+      font-size: .875rem;
+    }
+
+    .hero-engine-name {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+
+    .hero-engine-dot {
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-    }
-
-    .mockup-body {
-      flex: 1;
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      overflow: hidden;
-    }
-
-    .mockup-sidebar {
-      background: #f7f4ef;
-      border-right: 1px solid rgba(0,0,0,.06);
-      padding: 16px 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .mockup-sidebar-item {
-      height: 28px;
-      background: rgba(0,0,0,.06);
-      border-radius: 5px;
-    }
-    .mockup-sidebar-item:first-child {
-      background: rgba(29,158,117,.15);
-    }
-
-    .mockup-main {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .mockup-card {
-      background: #f7f4ef;
-      border-radius: 8px;
-      padding: 12px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .mockup-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 7px;
       flex-shrink: 0;
     }
 
-    .mockup-lines { flex: 1; display: flex; flex-direction: column; gap: 5px; }
-    .mockup-line { height: 8px; background: rgba(0,0,0,.1); border-radius: 4px; }
-    .mockup-line.short { width: 60%; }
+    .hero-engine-status {
+      font-size: .75rem;
+      font-weight: 600;
+      color: #1D9E75;
+    }
+
+    .hero-engine-status.off {
+      color: rgba(26,26,26,.35);
+    }
+
+    .hero-visual-stat {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0 0;
+      border-top: 1px solid rgba(26,26,26,.07);
+    }
+
+    .hero-visual-stat-label {
+      font-size: .8125rem;
+      color: rgba(26,26,26,.5);
+    }
+
+    .hero-visual-stat-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1D9E75;
+    }
 
     /* Carousel progress */
     .carousel-progress {
@@ -302,10 +316,10 @@
         <img src="assets/images/logo-boowlder.png" alt="Boowlder logo">
         <div class="nav-brand">
           <span class="nav-brand-name">Boowlder</span>
-          <span class="nav-brand-sub">Software Studio</span>
         </div>
       </a>
       <nav class="nav-links">
+        <a href="index.html" class="nav-link active" data-en="Home" data-fr="Accueil">Home</a>
         <a href="products.html" class="nav-link" data-en="Products" data-fr="Produits">Products</a>
         <a href="changelog.html" class="nav-link" data-en="Changelog" data-fr="Changelog">Changelog</a>
         <a href="support.html" class="nav-link" data-en="Support" data-fr="Support">Support</a>
@@ -320,6 +334,7 @@
     </div>
   </div>
   <div class="nav-mobile">
+    <a href="index.html" class="nav-link" data-en="Home" data-fr="Accueil">Home</a>
     <a href="products.html" class="nav-link" data-en="Products" data-fr="Produits">Products</a>
     <a href="changelog.html" class="nav-link" data-en="Changelog" data-fr="Changelog">Changelog</a>
     <a href="support.html" class="nav-link" data-en="Support" data-fr="Support">Support</a>
@@ -345,50 +360,46 @@
           </div>
         </div>
         <div class="carousel-visual">
-          <div class="carousel-mockup">
-            <div class="carousel-mockup-inner">
-              <div class="mockup-bar">
-                <div class="mockup-dot" style="background:#ff6b6b"></div>
-                <div class="mockup-dot" style="background:#ffd93d"></div>
-                <div class="mockup-dot" style="background:#6bcb77"></div>
+          <div class="hero-visual-card">
+            <div class="hero-visual-header">
+              <div class="hero-visual-icon">⚙️</div>
+              <div>
+                <div class="hero-visual-name">Forge</div>
+                <div class="hero-visual-sub" data-en="Automation Orchestrator" data-fr="Orchestrateur d'automatisation">Automation Orchestrator</div>
               </div>
-              <div class="mockup-body">
-                <div class="mockup-sidebar">
-                  <div class="mockup-sidebar-item"></div>
-                  <div class="mockup-sidebar-item"></div>
-                  <div class="mockup-sidebar-item"></div>
-                  <div class="mockup-sidebar-item"></div>
+            </div>
+            <div class="hero-visual-engines">
+              <div class="hero-engine-row">
+                <div class="hero-engine-name">
+                  <div class="hero-engine-dot" style="background:#ea4f3d"></div>
+                  n8n
                 </div>
-                <div class="mockup-main">
-                  <div class="mockup-card">
-                    <div class="mockup-icon" style="background:linear-gradient(135deg,#ea4f3d,#c43b2c)"></div>
-                    <div class="mockup-lines">
-                      <div class="mockup-line"></div>
-                      <div class="mockup-line short"></div>
-                    </div>
-                  </div>
-                  <div class="mockup-card">
-                    <div class="mockup-icon" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9)"></div>
-                    <div class="mockup-lines">
-                      <div class="mockup-line"></div>
-                      <div class="mockup-line short"></div>
-                    </div>
-                  </div>
-                  <div class="mockup-card">
-                    <div class="mockup-icon" style="background:linear-gradient(135deg,#1D9E75,#0F6E56)"></div>
-                    <div class="mockup-lines">
-                      <div class="mockup-line"></div>
-                      <div class="mockup-line short"></div>
-                    </div>
-                  </div>
-                </div>
+                <span class="hero-engine-status" data-en="running" data-fr="actif">running</span>
               </div>
+              <div class="hero-engine-row">
+                <div class="hero-engine-name">
+                  <div class="hero-engine-dot" style="background:#8b5cf6"></div>
+                  Node-RED
+                </div>
+                <span class="hero-engine-status off" data-en="stopped" data-fr="arrêté">stopped</span>
+              </div>
+              <div class="hero-engine-row">
+                <div class="hero-engine-name">
+                  <div class="hero-engine-dot" style="background:#1D9E75"></div>
+                  Kestra
+                </div>
+                <span class="hero-engine-status" data-en="running" data-fr="actif">running</span>
+              </div>
+            </div>
+            <div class="hero-visual-stat">
+              <span class="hero-visual-stat-label" data-en="Workflow templates" data-fr="Templates">Workflow templates</span>
+              <span class="hero-visual-stat-num">156</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 2 — Coming soon placeholder -->
+      <!-- Slide 2 — AgentHub coming soon -->
       <div class="carousel-slide">
         <div class="carousel-content">
           <div class="carousel-eyebrow" data-en="Coming soon" data-fr="Bientôt disponible">Coming soon</div>
@@ -400,30 +411,33 @@
           </div>
         </div>
         <div class="carousel-visual">
-          <div class="carousel-mockup">
-            <div class="carousel-mockup-inner">
-              <div class="mockup-bar">
-                <div class="mockup-dot" style="background:#ff6b6b"></div>
-                <div class="mockup-dot" style="background:#ffd93d"></div>
-                <div class="mockup-dot" style="background:#6bcb77"></div>
+          <div class="hero-visual-card">
+            <div class="hero-visual-header">
+              <div class="hero-visual-icon" style="background:linear-gradient(135deg,#1e3a5f,#2d5492)">🤖</div>
+              <div>
+                <div class="hero-visual-name">AgentHub</div>
+                <div class="hero-visual-sub" data-en="AI Agent Manager" data-fr="Gestionnaire d'agents IA">AI Agent Manager</div>
               </div>
-              <div class="mockup-body">
-                <div class="mockup-sidebar">
-                  <div class="mockup-sidebar-item"></div>
-                  <div class="mockup-sidebar-item"></div>
-                  <div class="mockup-sidebar-item"></div>
+            </div>
+            <div class="hero-visual-engines">
+              <div class="hero-engine-row">
+                <div class="hero-engine-name">
+                  <div class="hero-engine-dot" style="background:#1e3a5f"></div>
+                  Claude Agent
                 </div>
-                <div class="mockup-main">
-                  <div class="mockup-card">
-                    <div class="mockup-icon" style="background:linear-gradient(135deg,#1e3a5f,#2d5492)"></div>
-                    <div class="mockup-lines"><div class="mockup-line"></div><div class="mockup-line short"></div></div>
-                  </div>
-                  <div class="mockup-card">
-                    <div class="mockup-icon" style="background:linear-gradient(135deg,#1D9E75,#0F6E56)"></div>
-                    <div class="mockup-lines"><div class="mockup-line"></div><div class="mockup-line short"></div></div>
-                  </div>
-                </div>
+                <span class="hero-engine-status">3 <span data-en="active" data-fr="actifs">active</span></span>
               </div>
+              <div class="hero-engine-row">
+                <div class="hero-engine-name">
+                  <div class="hero-engine-dot" style="background:#1D9E75"></div>
+                  Local LLM
+                </div>
+                <span class="hero-engine-status off" data-en="coming soon" data-fr="bientôt">coming soon</span>
+              </div>
+            </div>
+            <div class="hero-visual-stat">
+              <span class="hero-visual-stat-label" data-en="In development" data-fr="En développement">In development</span>
+              <span class="hero-visual-stat-num">2025</span>
             </div>
           </div>
         </div>
