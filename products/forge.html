@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forge — Boowlder</title>
+  <meta name="description" content="Forge — Desktop orchestrator for automation engines. Install and manage n8n, Node-RED, Kestra from one UI. €39 one-time.">
+  <link rel="icon" href="../assets/images/logo-boowlder.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .page-hero {
+      padding: 108px 0 48px;
+      background: var(--bg);
+    }
+
+    .forge-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .forge-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .forge-desc {
+      font-size: 1.05rem;
+      color: var(--ink-60);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .forge-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .forge-feature {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .forge-feature-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(29,158,117,.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: .95rem;
+    }
+
+    .forge-feature-text h4 {
+      font-family: var(--font-sans);
+      font-size: .875rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .forge-feature-text p {
+      font-size: .8125rem;
+    }
+
+    .download-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .download-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: .875rem;
+      font-weight: 500;
+      color: var(--ink);
+      transition: var(--transition);
+    }
+    .download-link:hover { border-color: var(--green); color: var(--green); }
+    .download-link-platform { color: var(--ink-60); font-size: .8rem; flex: 1; }
+    .download-link-ext { font-size: .75rem; color: var(--ink-30); font-weight: 400; }
+
+    @media (max-width: 860px) {
+      .forge-layout { grid-template-columns: 1fr; }
+      .forge-features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo-boowlder.png" alt="Boowlder logo">
+        <div class="nav-brand">
+          <span class="nav-brand-name">Boowlder</span>
+          <span class="nav-brand-sub">Software Studio</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="../products.html" class="nav-link active" data-en="Products" data-fr="Produits">Products</a>
+        <a href="../changelog.html" class="nav-link" data-en="Changelog" data-fr="Changelog">Changelog</a>
+        <a href="../support.html" class="nav-link" data-en="Support" data-fr="Support">Support</a>
+      </nav>
+      <button class="nav-lang">FR</button>
+      <a href="../account.html" class="btn btn-outline btn-sm nav-cta" data-en="Sign in" data-fr="Connexion">Sign in</a>
+      <button class="nav-hamburger" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <a href="../products.html" class="nav-link" data-en="Products" data-fr="Produits">Products</a>
+    <a href="../changelog.html" class="nav-link" data-en="Changelog" data-fr="Changelog">Changelog</a>
+    <a href="../support.html" class="nav-link" data-en="Support" data-fr="Support">Support</a>
+    <a href="../account.html" class="nav-link" data-en="Sign in" data-fr="Connexion">Sign in</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb fade-in">
+      <a href="../index.html" data-en="Home" data-fr="Accueil">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="../products.html" data-en="Products" data-fr="Produits">Products</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Forge</span>
+    </div>
+  </div>
+</div>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="forge-layout">
+
+      <!-- Left — content -->
+      <div>
+        <div class="forge-title fade-in">
+          <h1>Forge</h1>
+          <span class="badge badge-early" data-en="Early access" data-fr="Accès anticipé">Early access</span>
+          <span class="badge badge-free">v0.1.1</span>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery-section fade-in" style="margin-bottom:40px">
+          <div class="gallery-tabs">
+            <button class="gallery-tab active" data-tab="overview" data-en="Overview" data-fr="Vue d'ensemble">Overview</button>
+            <button class="gallery-tab" data-tab="engines" data-en="Engines" data-fr="Moteurs">Engines</button>
+            <button class="gallery-tab" data-tab="workflows" data-en="Workflows" data-fr="Workflows">Workflows</button>
+            <button class="gallery-tab" data-tab="settings" data-en="Settings" data-fr="Paramètres">Settings</button>
+          </div>
+          <div class="gallery-panel active" data-panel="overview">
+            <div class="gallery-placeholder">
+              <div style="text-align:center">
+                <div style="font-size:2rem;margin-bottom:8px">⚙️</div>
+                <div data-en="Dashboard overview — screenshot coming soon" data-fr="Vue d'ensemble du dashboard — capture d'écran bientôt disponible">Dashboard overview — screenshot coming soon</div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-panel" data-panel="engines">
+            <div class="gallery-placeholder">
+              <div style="text-align:center">
+                <div style="font-size:2rem;margin-bottom:8px">🔧</div>
+                <div data-en="Engines management — screenshot coming soon" data-fr="Gestion des moteurs — capture d'écran bientôt disponible">Engines management — screenshot coming soon</div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-panel" data-panel="workflows">
+            <div class="gallery-placeholder">
+              <div style="text-align:center">
+                <div style="font-size:2rem;margin-bottom:8px">🔄</div>
+                <div data-en="Workflow templates — screenshot coming soon" data-fr="Templates de workflows — capture d'écran bientôt disponible">Workflow templates — screenshot coming soon</div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-panel" data-panel="settings">
+            <div class="gallery-placeholder">
+              <div style="text-align:center">
+                <div style="font-size:2rem;margin-bottom:8px">⚡</div>
+                <div data-en="Settings & configuration — screenshot coming soon" data-fr="Paramètres & configuration — capture d'écran bientôt disponible">Settings &amp; configuration — screenshot coming soon</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <h2 class="fade-in" style="margin-bottom:16px;font-size:1.6rem" data-en="What is Forge?" data-fr="Qu'est-ce que Forge ?">What is Forge?</h2>
+        <p class="forge-desc fade-in" data-en="Forge is a desktop application that eliminates the friction of setting up and maintaining automation engines. Instead of SSH sessions, Docker commands, and YAML files, you get a clean interface to install, start, stop, and configure n8n, Node-RED, Kestra and Activepieces in seconds." data-fr="Forge est une application desktop qui élimine la friction liée à la mise en place et la maintenance de moteurs d'automatisation. À la place des sessions SSH, des commandes Docker et des fichiers YAML, vous obtenez une interface propre pour installer, démarrer, arrêter et configurer n8n, Node-RED, Kestra et Activepieces en quelques secondes.">Forge is a desktop application that eliminates the friction of setting up and maintaining automation engines. Instead of SSH sessions, Docker commands, and YAML files, you get a clean interface to install, start, stop, and configure n8n, Node-RED, Kestra and Activepieces in seconds.</p>
+
+        <!-- Features grid -->
+        <div class="forge-features">
+          <div class="forge-feature fade-in">
+            <div class="forge-feature-icon">🚀</div>
+            <div class="forge-feature-text">
+              <h4 data-en="One-click install" data-fr="Installation en un clic">One-click install</h4>
+              <p data-en="Any engine running in under 60 seconds." data-fr="Tout moteur opérationnel en moins de 60 secondes.">Any engine running in under 60 seconds.</p>
+            </div>
+          </div>
+          <div class="forge-feature fade-in fade-in-delay-1">
+            <div class="forge-feature-icon">📦</div>
+            <div class="forge-feature-text">
+              <h4 data-en="156 workflow templates" data-fr="156 templates de workflows">156 workflow templates</h4>
+              <p data-en="Ready-to-import automations for common tasks." data-fr="Automations prêtes à l'import pour les tâches courantes.">Ready-to-import automations for common tasks.</p>
+            </div>
+          </div>
+          <div class="forge-feature fade-in fade-in-delay-2">
+            <div class="forge-feature-icon">🔒</div>
+            <div class="forge-feature-text">
+              <h4 data-en="100% local" data-fr="100% local">100% local</h4>
+              <p data-en="No cloud, no telemetry. Everything runs on your machine." data-fr="Ni cloud, ni télémétrie. Tout tourne sur votre machine.">No cloud, no telemetry. Everything runs on your machine.</p>
+            </div>
+          </div>
+          <div class="forge-feature fade-in fade-in-delay-3">
+            <div class="forge-feature-icon">🎯</div>
+            <div class="forge-feature-text">
+              <h4 data-en="Multi-engine" data-fr="Multi-moteur">Multi-engine</h4>
+              <p data-en="Run n8n, Node-RED and Kestra side by side." data-fr="Faites tourner n8n, Node-RED et Kestra en parallèle.">Run n8n, Node-RED and Kestra side by side.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- How to use -->
+        <h2 class="fade-in" style="margin-bottom:28px;font-size:1.5rem" data-en="How to use" data-fr="Comment utiliser">How to use</h2>
+        <div class="steps fade-in">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4 data-en="Download Forge" data-fr="Télécharger Forge">Download Forge</h4>
+              <p data-en="Grab the installer for your OS from the download section below. Windows, macOS and Linux are all supported." data-fr="Téléchargez l'installeur pour votre OS depuis la section ci-dessous. Windows, macOS et Linux sont tous supportés.">Grab the installer for your OS from the download section below. Windows, macOS and Linux are all supported.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4 data-en="Choose an engine" data-fr="Choisir un moteur">Choose an engine</h4>
+              <p data-en="Pick n8n, Node-RED or Kestra from the dashboard and click Install. Forge handles Docker, ports and configuration automatically." data-fr="Choisissez n8n, Node-RED ou Kestra depuis le tableau de bord et cliquez sur Installer. Forge gère Docker, les ports et la configuration automatiquement.">Pick n8n, Node-RED or Kestra from the dashboard and click Install. Forge handles Docker, ports and configuration automatically.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4 data-en="Import a template" data-fr="Importer un template">Import a template</h4>
+              <p data-en="Browse the 156 built-in workflow templates and import any of them into your engine in one click." data-fr="Parcourez les 156 templates de workflows intégrés et importez-en n'importe lequel dans votre moteur en un clic.">Browse the 156 built-in workflow templates and import any of them into your engine in one click.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4 data-en="Activate your license" data-fr="Activer votre licence">Activate your license</h4>
+              <p data-en="After purchase you'll receive a license key by email. Enter it in Forge to unlock the full version. Valid on up to 3 machines." data-fr="Après l'achat, vous recevrez une clé de licence par email. Entrez-la dans Forge pour déverrouiller la version complète. Valide sur 3 machines maximum.">After purchase you'll receive a license key by email. Enter it in Forge to unlock the full version. Valid on up to 3 machines.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Downloads -->
+        <h2 class="fade-in" style="margin-bottom:20px;font-size:1.5rem" id="trial" data-en="Download" data-fr="Télécharger">Download</h2>
+        <p class="fade-in" style="margin-bottom:20px" data-en="Try Forge free for 14 days — no license required." data-fr="Essayez Forge gratuitement pendant 14 jours — aucune licence requise.">Try Forge free for 14 days — no license required.</p>
+        <div class="download-links fade-in">
+          <a href="https://github.com/luchepa75-maker/forge/releases/latest/download/Forge_0.1.1_x64-setup.exe" class="download-link">
+            <span>🪟</span>
+            <span class="download-link-platform">Windows</span>
+            <span>Forge_0.1.1_x64-setup.exe</span>
+            <span class="download-link-ext">.exe</span>
+          </a>
+          <a href="https://github.com/luchepa75-maker/forge/releases/latest/download/Forge_0.1.1_x64.dmg" class="download-link">
+            <span>🍎</span>
+            <span class="download-link-platform">macOS</span>
+            <span>Forge_0.1.1_x64.dmg</span>
+            <span class="download-link-ext">.dmg</span>
+          </a>
+          <a href="https://github.com/luchepa75-maker/forge/releases/latest/download/forge_0.1.1_amd64.AppImage" class="download-link">
+            <span>🐧</span>
+            <span class="download-link-platform">Linux</span>
+            <span>forge_0.1.1_amd64.AppImage</span>
+            <span class="download-link-ext">.AppImage</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right — buy box -->
+      <div>
+        <div class="buy-box fade-in">
+          <div class="badge badge-early" style="margin-bottom:8px" data-en="Early access" data-fr="Accès anticipé">Early access</div>
+          <div class="buy-price">€39</div>
+          <div class="buy-price-note" data-en="one-time payment · lifetime license · free updates" data-fr="paiement unique · licence à vie · mises à jour gratuites">one-time payment · lifetime license · free updates</div>
+          <div class="buy-actions">
+            <a href="#" class="btn btn-primary" data-en="Buy now" data-fr="Acheter maintenant">Buy now</a>
+            <a href="#trial" class="btn btn-outline" data-en="Download free trial" data-fr="Télécharger l'essai gratuit">Download free trial</a>
+          </div>
+
+          <div class="info-box">
+            <div class="info-row">
+              <span class="info-row-label" data-en="Version" data-fr="Version">Version</span>
+              <span class="info-row-value">v0.1.1</span>
+            </div>
+            <div class="info-row">
+              <span class="info-row-label" data-en="Platforms" data-fr="Plateformes">Platforms</span>
+              <span class="info-row-value">Win / Mac / Linux</span>
+            </div>
+            <div class="info-row">
+              <span class="info-row-label" data-en="Templates" data-fr="Templates">Templates</span>
+              <span class="info-row-value">156 workflows</span>
+            </div>
+            <div class="info-row">
+              <span class="info-row-label" data-en="License" data-fr="Licence">License</span>
+              <span class="info-row-value" data-en="Lifetime · 3 machines" data-fr="À vie · 3 machines">Lifetime · 3 machines</span>
+            </div>
+            <div class="info-row">
+              <span class="info-row-label" data-en="Updates" data-fr="Mises à jour">Updates</span>
+              <span class="info-row-value" data-en="Free forever" data-fr="Gratuites à vie">Free forever</span>
+            </div>
+          </div>
+
+          <div style="margin-top:16px;font-size:.8125rem;color:var(--ink-60);line-height:1.6" data-en="Questions? <a href='../support.html' style='color:var(--green)'>Read the FAQ</a> or <a href='mailto:support@boowlder.com' style='color:var(--green)'>contact us</a>." data-fr="Des questions ? <a href='../support.html' style='color:var(--green)'>Lisez la FAQ</a> ou <a href='mailto:support@boowlder.com' style='color:var(--green)'>contactez-nous</a>.">Questions? <a href="../support.html" style="color:var(--green)">Read the FAQ</a> or <a href="mailto:support@boowlder.com" style="color:var(--green)">contact us</a>.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="../assets/images/logo-boowlder.png" alt="Boowlder">
+          <span class="footer-logo-name">Boowlder</span>
+        </div>
+        <p class="footer-tagline" data-en="Premium tools for developers and solo founders." data-fr="Outils premium pour développeurs et fondateurs solo.">Premium tools for developers and solo founders.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Products" data-fr="Produits">Products</h4>
+        <ul>
+          <li><a href="forge.html">Forge</a></li>
+          <li><a href="../free.html" data-en="Free tools" data-fr="Outils gratuits">Free tools</a></li>
+          <li><a href="../changelog.html">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Company" data-fr="Boowlder">Company</h4>
+        <ul>
+          <li><a href="../support.html">Support</a></li>
+          <li><a href="../account.html" data-en="Account" data-fr="Compte">Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:support@boowlder.com">support@boowlder.com</a></li></ul></div>
+    </div>
+    <div class="footer-newsletter">
+      <h4 data-en="Stay in the loop" data-fr="Restez informé">Stay in the loop</h4>
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" required>
+        <button type="submit" class="newsletter-btn" data-en="Subscribe" data-fr="S'inscrire">Subscribe</button>
+      </form>
+      <div class="newsletter-msg"></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Boowlder.</span>
+      <a href="mailto:support@boowlder.com">support@boowlder.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

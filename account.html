@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account — Boowlder</title>
+  <meta name="description" content="Sign in or create your Boowlder account to manage licenses and purchases.">
+  <link rel="icon" href="assets/images/logo-boowlder.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .auth-page {
+      min-height: 100vh;
+      padding-top: 68px;
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+    }
+
+    .auth-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 68px);
+      width: 100%;
+    }
+
+    .auth-left {
+      background: var(--navy);
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .auth-left-top { display: flex; flex-direction: column; gap: 48px; }
+
+    .auth-left-tagline {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+    }
+
+    .auth-left-features {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .auth-left-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .9375rem;
+      color: rgba(255,255,255,.75);
+    }
+
+    .auth-left-feature-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    .auth-left-footer {
+      font-size: .8125rem;
+      color: rgba(255,255,255,.35);
+    }
+
+    .auth-right {
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .auth-container {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .auth-title {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .auth-sub {
+      font-size: .9375rem;
+      color: var(--ink-60);
+      margin-bottom: 28px;
+    }
+
+    .divider-or {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 20px 0;
+      color: var(--ink-30);
+      font-size: .8125rem;
+    }
+    .divider-or::before, .divider-or::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* License activation section */
+    .license-section {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .license-input-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .license-input {
+      flex: 1;
+      padding: 12px 16px;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: .875rem;
+      font-family: var(--font-sans);
+      color: var(--ink);
+      letter-spacing: .04em;
+      outline: none;
+      transition: border-color var(--transition);
+      text-transform: uppercase;
+    }
+    .license-input:focus { border-color: var(--green); }
+    .license-input::placeholder { text-transform: none; letter-spacing: 0; color: var(--ink-30); }
+
+    .license-result {
+      margin-top: 10px;
+      font-size: .8125rem;
+      min-height: 18px;
+    }
+    .license-result.success { color: var(--green); }
+    .license-result.error { color: #e66; }
+
+    /* Purchases placeholder */
+    .purchases-section {
+      margin-top: 32px;
+      padding: 24px;
+      background: var(--bg-alt);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .purchases-empty {
+      font-size: .9375rem;
+      color: var(--ink-60);
+    }
+
+    @media (max-width: 800px) {
+      .auth-grid { grid-template-columns: 1fr; }
+      .auth-left { display: none; }
+      .auth-right { padding: 120px 32px 64px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo-boowlder.png" alt="Boowlder logo">
+        <div class="nav-brand">
+          <span class="nav-brand-name">Boowlder</span>
+          <span class="nav-brand-sub">Software Studio</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="products.html" class="nav-link" data-en="Products" data-fr="Produits">Products</a>
+        <a href="changelog.html" class="nav-link" data-en="Changelog" data-fr="Changelog">Changelog</a>
+        <a href="support.html" class="nav-link" data-en="Support" data-fr="Support">Support</a>
+      </nav>
+      <button class="nav-lang">FR</button>
+      <button class="nav-hamburger" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <a href="products.html" class="nav-link" data-en="Products" data-fr="Produits">Products</a>
+    <a href="changelog.html" class="nav-link" data-en="Changelog" data-fr="Changelog">Changelog</a>
+    <a href="support.html" class="nav-link" data-en="Support" data-fr="Support">Support</a>
+  </div>
+</nav>
+
+<div class="auth-page">
+  <div class="auth-grid">
+
+    <!-- Left panel -->
+    <div class="auth-left">
+      <div class="auth-left-top">
+        <div>
+          <div class="footer-logo" style="margin-bottom:0">
+            <img src="assets/images/logo-boowlder.png" alt="Boowlder" style="height:28px;filter:brightness(0) invert(1) opacity(.9)">
+            <span style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase">Boowlder</span>
+          </div>
+        </div>
+        <div>
+          <p class="auth-left-tagline" data-en="Your tools, your licenses, your account." data-fr="Vos outils, vos licences, votre compte.">Your tools, your licenses, your account.</p>
+        </div>
+        <div class="auth-left-features">
+          <div class="auth-left-feature"><div class="auth-left-feature-dot"></div><span data-en="Access all your purchases" data-fr="Accédez à tous vos achats">Access all your purchases</span></div>
+          <div class="auth-left-feature"><div class="auth-left-feature-dot"></div><span data-en="Retrieve and activate license keys" data-fr="Récupérez et activez vos clés de licence">Retrieve and activate license keys</span></div>
+          <div class="auth-left-feature"><div class="auth-left-feature-dot"></div><span data-en="Download the latest versions" data-fr="Téléchargez les dernières versions">Download the latest versions</span></div>
+          <div class="auth-left-feature"><div class="auth-left-feature-dot"></div><span data-en="Free updates forever" data-fr="Mises à jour gratuites à vie">Free updates forever</span></div>
+        </div>
+      </div>
+      <div class="auth-left-footer">© 2025 Boowlder</div>
+    </div>
+
+    <!-- Right panel -->
+    <div class="auth-right">
+      <div class="auth-container">
+
+        <h2 class="auth-title" data-en="Welcome back" data-fr="Bienvenue">Welcome back</h2>
+        <p class="auth-sub" data-en="Sign in to manage your licenses and downloads." data-fr="Connectez-vous pour gérer vos licences et téléchargements.">Sign in to manage your licenses and downloads.</p>
+
+        <!-- Tabs -->
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-panel="login" data-en="Sign in" data-fr="Connexion">Sign in</button>
+          <button class="auth-tab" data-panel="register" data-en="Create account" data-fr="Créer un compte">Create account</button>
+        </div>
+
+        <!-- Login panel -->
+        <div class="auth-panel active" data-panel="login">
+          <form onsubmit="return false">
+            <div class="form-group">
+              <label class="form-label" data-en="Email" data-fr="Email">Email</label>
+              <input type="email" class="form-input" data-en="your@email.com" data-fr="votre@email.com" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-en="Password" data-fr="Mot de passe">Password</label>
+              <input type="password" class="form-input" placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px" data-en="Sign in" data-fr="Se connecter">Sign in</button>
+          </form>
+          <div class="divider-or" data-en="or" data-fr="ou">or</div>
+          <p style="font-size:.8125rem;color:var(--ink-60);text-align:center">
+            <span data-en="Don't have an account?" data-fr="Pas encore de compte ?">Don't have an account?</span>
+            <button onclick="document.querySelector('[data-panel=register]').parentElement.querySelectorAll('.auth-tab')[1].click()" style="background:none;border:none;cursor:pointer;color:var(--green);font-size:.8125rem;font-weight:600;padding:0;margin-left:4px" data-en="Create one" data-fr="Créer un compte">Create one</button>
+          </p>
+        </div>
+
+        <!-- Register panel -->
+        <div class="auth-panel" data-panel="register">
+          <form onsubmit="return false">
+            <div class="form-group">
+              <label class="form-label" data-en="Email" data-fr="Email">Email</label>
+              <input type="email" class="form-input" data-en="your@email.com" data-fr="votre@email.com" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-en="Password" data-fr="Mot de passe">Password</label>
+              <input type="password" class="form-input" placeholder="••••••••">
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-en="Confirm password" data-fr="Confirmer le mot de passe">Confirm password</label>
+              <input type="password" class="form-input" placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px" data-en="Create account" data-fr="Créer mon compte">Create account</button>
+          </form>
+        </div>
+
+        <!-- License activation -->
+        <div class="license-section">
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:6px" data-en="Activate a license" data-fr="Activer une licence">Activate a license</h3>
+          <p style="font-size:.8125rem;color:var(--ink-60);margin-bottom:14px" data-en="Enter your license key to link it to your account." data-fr="Entrez votre clé de licence pour la lier à votre compte.">Enter your license key to link it to your account.</p>
+          <form id="license-form">
+            <div class="license-input-row">
+              <input type="text" id="license-key-input" class="license-input" placeholder="FORGE-XXXX-XXXX-XXXX-XXXX" maxlength="24">
+              <button type="submit" class="btn btn-primary btn-sm" data-en="Validate" data-fr="Valider">Validate</button>
+            </div>
+          </form>
+          <div id="license-result" class="license-result"></div>
+        </div>
+
+        <!-- Purchases placeholder -->
+        <div class="purchases-section">
+          <div class="purchases-empty">
+            <div style="font-size:1.5rem;margin-bottom:8px">🧾</div>
+            <span data-en="Your purchases will appear here once you're signed in." data-fr="Vos achats apparaîtront ici une fois connecté.">Your purchases will appear here once you're signed in.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  const licenseForm = document.getElementById('license-form')
+  const licenseInput = document.getElementById('license-key-input')
+  const licenseResult = document.getElementById('license-result')
+
+  if (licenseForm) {
+    licenseForm.addEventListener('submit', async e => {
+      e.preventDefault()
+      const key = licenseInput.value.trim().toUpperCase()
+      if (!key) return
+
+      licenseResult.textContent = '...'
+      licenseResult.className = 'license-result'
+
+      try {
+        const res = await fetch('https://api.boowlder.com/validate-license', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ key, hardware_id: 'web-ui' })
+        })
+        const data = await res.json()
+        licenseResult.textContent = data.message || (data.valid ? 'License valid.' : 'Invalid license.')
+        licenseResult.className = 'license-result ' + (data.valid ? 'success' : 'error')
+      } catch {
+        licenseResult.textContent = 'Network error.'
+        licenseResult.className = 'license-result error'
+      }
+    })
+  }
+</script>
+</body>
+</html>

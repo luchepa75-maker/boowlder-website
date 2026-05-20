@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support — Boowlder</title>
+  <meta name="description" content="Support, FAQ and contact for Boowlder products.">
+  <link rel="icon" href="assets/images/logo-boowlder.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .page-hero { padding: 128px 0 64px; }
+
+    .support-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 88px;
+      text-align: center;
+    }
+
+    .contact-avatar {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--green), var(--teal));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.6rem;
+    }
+
+    .contact-name {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contact-role {
+      font-size: .8125rem;
+      color: var(--ink-60);
+      margin-bottom: 20px;
+    }
+
+    .contact-email-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: .875rem;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+      transition: var(--transition);
+      margin-bottom: 12px;
+    }
+    .contact-email-btn:hover { border-color: var(--green); color: var(--green); background: rgba(29,158,117,.04); }
+
+    .contact-note {
+      font-size: .8rem;
+      color: var(--ink-60);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 760px) {
+      .support-layout { grid-template-columns: 1fr; }
+      .contact-card { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo-boowlder.png" alt="Boowlder logo">
+        <div class="nav-brand">
+          <span class="nav-brand-name">Boowlder</span>
+          <span class="nav-brand-sub">Software Studio</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="products.html" class="nav-link" data-en="Products" data-fr="Produits">Products</a>
+        <a href="changelog.html" class="nav-link" data-en="Changelog" data-fr="Changelog">Changelog</a>
+        <a href="support.html" class="nav-link active" data-en="Support" data-fr="Support">Support</a>
+      </nav>
+      <button class="nav-lang">FR</button>
+      <a href="account.html" class="btn btn-outline btn-sm nav-cta" data-en="Sign in" data-fr="Connexion">Sign in</a>
+      <button class="nav-hamburger" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <a href="products.html" class="nav-link" data-en="Products" data-fr="Produits">Products</a>
+    <a href="changelog.html" class="nav-link" data-en="Changelog" data-fr="Changelog">Changelog</a>
+    <a href="support.html" class="nav-link" data-en="Support" data-fr="Support">Support</a>
+    <a href="account.html" class="nav-link" data-en="Sign in" data-fr="Connexion">Sign in</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label fade-in">Support</div>
+    <h1 class="fade-in" data-en="How can I help?" data-fr="Comment puis-je vous aider ?">How can I help?</h1>
+    <p class="section-subtitle fade-in" style="margin-bottom:0" data-en="You talk to the builder directly — no support tickets, no bots." data-fr="Vous parlez directement au créateur — pas de tickets, pas de bots.">You talk to the builder directly — no support tickets, no bots.</p>
+  </div>
+</div>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="support-layout">
+
+      <!-- FAQ -->
+      <div>
+        <h2 class="fade-in" style="margin-bottom:32px" data-en="Frequently asked questions" data-fr="Questions fréquentes">Frequently asked questions</h2>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            <span data-en="How does licensing work?" data-fr="Comment fonctionne la licence ?">How does licensing work?</span>
+            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-en="Each purchase gives you a license key valid on up to 3 machines simultaneously. The key is tied to your hardware fingerprint and works offline after initial activation (7-day grace period for offline use). You can deactivate a machine at any time to free up a slot." data-fr="Chaque achat vous donne une clé de licence valide sur 3 machines simultanément. La clé est liée à l'empreinte matérielle de votre machine et fonctionne hors ligne après l'activation initiale (période de grâce de 7 jours hors ligne). Vous pouvez désactiver une machine à tout moment pour libérer un emplacement.">Each purchase gives you a license key valid on up to 3 machines simultaneously. The key is tied to your hardware fingerprint and works offline after initial activation (7-day grace period for offline use). You can deactivate a machine at any time to free up a slot.</div></div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            <span data-en="Do you offer refunds?" data-fr="Proposez-vous des remboursements ?">Do you offer refunds?</span>
+            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-en="Yes — I offer a no-questions-asked refund within 30 days of purchase if you're not satisfied. Just email me with your order ID." data-fr="Oui — je propose un remboursement sans conditions dans les 30 jours suivant l'achat si vous n'êtes pas satisfait. Envoyez-moi simplement un email avec votre identifiant de commande.">Yes — I offer a no-questions-asked refund within 30 days of purchase if you're not satisfied. Just email me with your order ID.</div></div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            <span data-en="Which platforms are supported?" data-fr="Quelles plateformes sont supportées ?">Which platforms are supported?</span>
+            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-en="Forge supports Windows 10+, macOS 12+ (Intel & Apple Silicon), and Linux (Ubuntu 20.04+, AppImage). All platforms get the same feature set." data-fr="Forge supporte Windows 10+, macOS 12+ (Intel et Apple Silicon), et Linux (Ubuntu 20.04+, AppImage). Toutes les plateformes ont le même ensemble de fonctionnalités.">Forge supports Windows 10+, macOS 12+ (Intel &amp; Apple Silicon), and Linux (Ubuntu 20.04+, AppImage). All platforms get the same feature set.</div></div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            <span data-en="Will future versions be free?" data-fr="Les futures versions seront-elles gratuites ?">Will future versions be free?</span>
+            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-en="Yes. All updates to Forge — including major versions — are free for everyone who purchased a license. No upgrade fees, ever." data-fr="Oui. Toutes les mises à jour de Forge — y compris les versions majeures — sont gratuites pour tous ceux qui ont acheté une licence. Jamais de frais de mise à niveau.">Yes. All updates to Forge — including major versions — are free for everyone who purchased a license. No upgrade fees, ever.</div></div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            <span data-en="Can I use Forge for commercial projects?" data-fr="Puis-je utiliser Forge pour des projets commerciaux ?">Can I use Forge for commercial projects?</span>
+            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-en="Absolutely. Your license is a personal, perpetual license — you can use Forge in any personal or commercial context. Team licenses (5+ seats) are available on request." data-fr="Absolument. Votre licence est une licence personnelle perpétuelle — vous pouvez utiliser Forge dans tout contexte personnel ou commercial. Des licences équipes (5+ postes) sont disponibles sur demande.">Absolutely. Your license is a personal, perpetual license — you can use Forge in any personal or commercial context. Team licenses (5+ seats) are available on request.</div></div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            <span data-en="Does Forge require Docker?" data-fr="Forge nécessite-t-il Docker ?">Does Forge require Docker?</span>
+            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-en="Forge installs and manages Docker for you if it's not already present. You don't need to know anything about Docker to use Forge — it handles all that behind the scenes." data-fr="Forge installe et gère Docker pour vous s'il n'est pas déjà présent. Vous n'avez pas besoin de connaître Docker pour utiliser Forge — il gère tout en arrière-plan.">Forge installs and manages Docker for you if it's not already present. You don't need to know anything about Docker to use Forge — it handles all that behind the scenes.</div></div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            <span data-en="I lost my license key — what do I do?" data-fr="J'ai perdu ma clé de licence — que faire ?">I lost my license key — what do I do?</span>
+            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-en="Email me with the address you used to purchase and I'll resend your key within 24 hours. You can also log in to your account at boowlder.com/account to retrieve it." data-fr="Envoyez-moi un email avec l'adresse utilisée lors de l'achat et je renverrai votre clé dans les 24 heures. Vous pouvez aussi vous connecter à votre compte sur boowlder.com/account pour la récupérer.">Email me with the address you used to purchase and I'll resend your key within 24 hours. You can also log in to your account at boowlder.com/account to retrieve it.</div></div>
+        </div>
+
+      </div>
+
+      <!-- Contact card -->
+      <div>
+        <div class="contact-card fade-in">
+          <div class="contact-avatar">👋</div>
+          <div class="contact-name">Julien</div>
+          <div class="contact-role" data-en="Builder @ Boowlder" data-fr="Créateur @ Boowlder">Builder @ Boowlder</div>
+          <a href="mailto:support@boowlder.com" class="contact-email-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4a1 1 0 011-1h10a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V4zm0 0l6 4.5L14 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            support@boowlder.com
+          </a>
+          <p class="contact-note" data-en="I reply within 24 hours, usually much faster. No bots, no ticket system — just me." data-fr="Je réponds dans les 24 heures, souvent bien plus vite. Pas de bots, pas de tickets — juste moi.">I reply within 24 hours, usually much faster. No bots, no ticket system — just me.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="assets/images/logo-boowlder.png" alt="Boowlder">
+          <span class="footer-logo-name">Boowlder</span>
+        </div>
+        <p class="footer-tagline" data-en="Premium tools for developers and solo founders." data-fr="Outils premium pour développeurs et fondateurs solo.">Premium tools for developers and solo founders.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Products" data-fr="Produits">Products</h4>
+        <ul>
+          <li><a href="products/forge.html">Forge</a></li>
+          <li><a href="free.html" data-en="Free tools" data-fr="Outils gratuits">Free tools</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Company" data-fr="Boowlder">Company</h4>
+        <ul>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="account.html" data-en="Account" data-fr="Compte">Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:support@boowlder.com">support@boowlder.com</a></li></ul></div>
+    </div>
+    <div class="footer-newsletter">
+      <h4 data-en="Stay in the loop" data-fr="Restez informé">Stay in the loop</h4>
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" required>
+        <button type="submit" class="newsletter-btn" data-en="Subscribe" data-fr="S'inscrire">Subscribe</button>
+      </form>
+      <div class="newsletter-msg"></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Boowlder.</span>
+      <a href="mailto:support@boowlder.com">support@boowlder.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
